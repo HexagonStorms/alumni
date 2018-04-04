@@ -15,4 +15,13 @@ class HomeController extends Controller
         ];
         return view('home')->with($data);
     }
+
+    public function studentDetail($id)
+    {
+        $student = Student::findOrFail($id);
+        $data = [
+            'student' => $student
+        ];
+        return view('student-detail')->with($data);
+    }
 }
