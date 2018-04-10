@@ -25,7 +25,6 @@ class CreateStudentsTable extends Migration
             $table->string('linkedin')->nullable();
             $table->string('twitter')->nullable();
             $table->string('github')->nullable();
-            $table->string('image')->nullable();
             $table->boolean('graduated')->default(0);
             $table->integer('season_cohort')->nullable();
             $table->softDeletes();

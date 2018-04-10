@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use Log;
 
 class HomeController extends Controller
 {
@@ -18,10 +19,11 @@ class HomeController extends Controller
 
     public function studentDetail($id)
     {
-        $student = Student::findOrFail($id);
+        $student = Student::findOrFail($id)->with('answers');
         $data = [
             'student' => $student
         ];
+        Log::info($student);
         return view('student-detail')->with($data);
     }
 }
