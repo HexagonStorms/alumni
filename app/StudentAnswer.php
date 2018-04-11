@@ -13,6 +13,6 @@ class StudentAnswer extends Model
 
     public function student()
     {
-        return $this->hasOne('App\Student', 'id', 'student_id');
+        return $this->belongsTo('App\Student');
     }
 }

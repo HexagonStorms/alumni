@@ -1,8 +1,13 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: theme-color("secondary");
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: "Lato", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+$theme-colors: (
+  "primary": #8f1839,
+  "secondary": #d3d2d5
+);

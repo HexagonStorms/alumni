@@ -8,22 +8,35 @@ use Log;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::get();
+        $query = $request->query("full_name");
+        $students = Student::where("full_name", "like", "%$query%")->get();
         $data = [
-            'students' => $students
+            "students" => $students,
+            "query" => $query
         ];
-        return view('home')->with($data);
+        return view("home")->with($data);
+    }
+
+    public function viewProjects(Request $request)
+    {
+        $query = $request->query("full_name");
+        // Projects go here
+        // $students = Student::where("full_name", "like", "%$query%")->get();
+        $data = [
+            // "students" => $students,
+            "query" => $query
+        ];
+        return view("home")->with($data);
     }
 
     public function studentDetail($id)
     {
-        $student = Student::findOrFail($id)->with('answers');
+        $student = Student::where("id", $id)->with("studentAnswers.question")->first();
         $data = [
-            'student' => $student
+            "student" => $student
         ];
-        Log::info($student);
-        return view('student-detail')->with($data);
+        return view("student-detail")->with($data);
     }
 }
