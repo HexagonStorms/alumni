@@ -66,6 +66,17 @@
                     </a>
                 </div>
             </div>
+
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
+                        <i class="fas fa-file-alt fa-2x"></i>
+                    </a>
+                    <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
+                        <span class="student-media ml-2">Resume</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="col-md-9">
             <div class="row">
