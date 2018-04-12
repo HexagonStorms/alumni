@@ -40,7 +40,6 @@ body {
 .vta-header {
     color: theme-color("primary");
 }
-/* ======== GLOBAL END ========= */
 
 /* ======== NAV ========= */
 .specialization {
@@ -54,11 +53,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 .jumbotron {
-    background-image: url('/img/jumbotron/annie-spratt-608001-unsplash.jpg');
+    background-image: url('/img/jumbotron/alumni-search-banner.jpg');
     height: 500px;
     background-size: cover;
 }
-
+.nav-link {
+    font-weight: 900;
+    color: rgba(0,0,0,0.75) !important;
+}
 
 /* ======== HOME ========= */
 .searchtext {
@@ -95,6 +97,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 350px;
+    position: relative;
 }
 .student-specialization {
     text-transform: uppercase;
@@ -106,10 +109,17 @@ body {
 }
 .student-media {
     font-weight: 900;
-    font-size: 2em;
+    font-size: 1em;
 }
 .student-phone {
-    font-size: 1.4em;
+    font-size: 1.2em;
+}
+.back-arrow {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
 }
 
 /* ======== FOOTER START =========*/

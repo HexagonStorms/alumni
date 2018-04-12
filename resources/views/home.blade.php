@@ -1,8 +1,8 @@
 @extends('master') @section('title', 'Valley Tech | Alumni Home') @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center jumbotron">
-        <div class="col-6">
-            <p class="text-white searchtext mb-5">Determined, hardworking, and a sharp attention to detail. Find your next developer to join your team.</p>
+        <div class="col-8 mt-5">
+            <p class="text-white searchtext mb-5">Determined, hardworking, and a meticulous.<br /> Find your next Valley Tech developer to join your team.</p>
             <form method="GET" action="/">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search for developers" aria-label="developers" aria-describedby="basic-addon1" name="full_name">

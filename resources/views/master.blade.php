@@ -25,14 +25,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="/">Alumni</a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="/projects">Projects</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://valleytechrgv.com">Main Site</a>
+                    <a class="nav-link" href="http://valleytechrgv.com">Back to Main Site</a>
                 </li>
             </ul>
         </div>

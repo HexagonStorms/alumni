@@ -13,6 +13,7 @@
             </div>
         </div>
     </div>
+    <a href="/" alt="Back to Student Directory" title="Back to Student Directory"><i class="fas fa-arrow-alt-square-left back-arrow fa-3x"></i></a>
 </div>
 <div class="container">
     <div class="row">
@@ -23,9 +24,9 @@
 
             @if (!empty($student->homepage))
                 <div class="row justify-content-center">
-                    <div class="col-8">
+                    <div class="col-6">
                         <a class="primary-link" href="{{ $student->homepage }}">
-                            <i class="fas fa-browser fa-2x"></i>
+                            <i class="fas fa-browser"></i>
                         </a>
                         <a class="primary-link" href="http://www.{{ $student->homepage }}">
                             <span class="student-media ml-2">Portfolio</span>
@@ -35,9 +36,9 @@
             @endif
 
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-6">
                     <a class="primary-link" href="https://linkedin.com/{{ $student->linkedin }}">
-                        <i class="fab fa-linkedin fa-2x"></i>
+                        <i class="fab fa-linkedin"></i>
                     </a>
                     <a class="primary-link" href="https://linkedin.com/{{ $student->linkedin }}">
                         <span class="student-media ml-2">LinkedIn</span>
@@ -46,20 +47,20 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-8">
-                    <a class="primary-link" href="https://github.com/{{ $student->homepage }}">
-                        <i class="fab fa-github fa-2x"></i>
+                <div class="col-6">
+                    <a class="primary-link" href="https://github.com/{{ $student->github }}">
+                        <i class="fab fa-github"></i>
                     </a>
-                    <a class="primary-link" href="https://github.com/{{ $student->homepage }}">
+                    <a class="primary-link" href="https://github.com/{{ $student->github }}">
                         <span class="student-media ml-2">Github</span>
                     </a>
                 </div>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-6">
                     <a class="primary-link" href="mailto:{{ $student->email }}">
-                        <i class="fal fa-envelope-square fa-2x"></i>
+                        <i class="fal fa-envelope-square"></i>
                     </a>
                     <a class="primary-link" href="mailto:{{ $student->email }}">
                         <span class="student-media ml-2">Email</span>
@@ -68,9 +69,9 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-6">
                     <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
-                        <i class="fas fa-file-alt fa-2x"></i>
+                        <i class="fas fa-file-alt"></i>
                     </a>
                     <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
                         <span class="student-media ml-2">Resume</span>
@@ -79,6 +80,13 @@
             </div>
         </div>
         <div class="col-md-9">
+            @if (!empty($student->video))
+                <div class="row mb-4">
+                    <div class="col">
+                        <iframe width="100%" height="450px" src="{{ $student->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            @endif
             <div class="row">
                 <div class="col">
                     @foreach($student->studentAnswers as $response)
