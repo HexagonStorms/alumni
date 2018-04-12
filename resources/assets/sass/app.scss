@@ -6,6 +6,9 @@
 @import '~bootstrap/scss/bootstrap';
 
 /* ======== GLOBAL ========= */
+.bg-white {
+    background-color: white;
+}
 .white-link {
     color: white;
     transition-duration: 0.3s;
