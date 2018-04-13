@@ -1,7 +1,7 @@
 @extends('master') @section('title', 'Valley Tech | Alumni Home') @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center jumbotron">
-        <div class="col-8 mt-5">
+        <div class="col-md-8 mt-5">
             <p class="text-white searchtext mb-5">Engaging, passionate, and motivated.<br /> Find your next Valley Tech developer or designer to join your team.</p>
             <form method="GET" action="/">
                 <div class="input-group mb-3">
@@ -21,7 +21,7 @@
 
     <div class="row student-directory">
         @foreach($students as $student)
-        <div class="col-3">
+        <div class="col-lg-3 col-md-6">
             <div class="card mb-3">
                 <a href="/students/{{ $student->id }}"><img class="card-img-top" src="/img/students/{{ str_replace(" ", "", $student->full_name) }}.jpg" alt="Card image cap"></a>
                 <div class="card-body">

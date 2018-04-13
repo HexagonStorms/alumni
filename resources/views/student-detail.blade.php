@@ -17,14 +17,14 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-6">
             <img src="/img/students/{{ str_replace(" ", "", $student->full_name) }}.jpg" alt="{{ $student->full_name }}" title="{{ $student->full_name }}" class="img-fluid mb-3" />
             <p class="text-center"><span class="student-specialization">{{ $student->specialization['title'] }}</span></p>
             <a href="tel:{{ $student->phone }}"><p class="student-phone text-center mb-2">{{ $student->phone }}</p></a>
 
             @if (!empty($student->homepage))
                 <div class="row justify-content-center">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <a class="primary-link" href="{{ $student->homepage }}">
                             <i class="fas fa-browser"></i>
                         </a>
@@ -36,7 +36,7 @@
             @endif
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-md-6">
                     <a class="primary-link" href="https://linkedin.com/{{ $student->linkedin }}">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-md-6">
                     <a class="primary-link" href="https://github.com/{{ $student->github }}">
                         <i class="fab fa-github"></i>
                     </a>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-md-6">
                     <a class="primary-link" href="mailto:{{ $student->email }}">
                         <i class="fal fa-envelope-square"></i>
                     </a>
@@ -69,7 +69,7 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-md-6">
                     <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
                         <i class="fas fa-file-alt"></i>
                     </a>
@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9 col-md-6">
             @if (!empty($student->video))
                 <div class="row mb-4">
                     <div class="col">
