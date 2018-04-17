@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use App\Project;
 use Log;
 
 class HomeController extends Controller
@@ -30,12 +31,12 @@ class HomeController extends Controller
     {
         $query = $request->query("full_name");
         // Projects go here
-        // $students = Student::where("full_name", "like", "%$query%")->get();
+        $projects = Project::where("name", "like", "%$query%")->get();
         $data = [
-            // "students" => $students,
+            "projects" => $projects,
             "query" => $query
         ];
-        return view("home")->with($data);
+        return view("projects")->with($data);
     }
 
     public function studentDetail($id)

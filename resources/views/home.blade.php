@@ -1,6 +1,6 @@
 @extends('master') @section('title', 'Valley Tech | Alumni Home') @section('content')
 <div class="container-fluid">
-    <div class="row justify-content-center jumbotron">
+    <div class="row justify-content-center jumbotron jumbotron-alumni">
         <div class="col-md-8 mt-5">
             <p class="text-white searchtext mb-5">Engaging, passionate, and motivated.<br /> Find your next Valley Tech developer or designer to join your team.</p>
             <form method="GET" action="/">

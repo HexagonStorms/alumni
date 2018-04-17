@@ -10060,18 +10060,12 @@ body {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-.jumbotron {
-  background-image: url("/img/jumbotron/alumni-search-banner.jpg");
-  height: 500px;
-  background-size: cover;
-}
-
 .nav-link {
   font-weight: 900;
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
-/* ======== HOME ========= */
+/* ======== HOME & PROJECTS ========= */
 
 .searchtext {
   font-size: 2em;
@@ -10079,6 +10073,27 @@ body {
 
 .card-title {
   font-weight: 900;
+}
+
+.jumbotron {
+  height: 500px;
+  background-size: cover;
+}
+
+.jumbotron-alumni {
+  background-image: url("/img/jumbotron/alumni-search-banner.jpg");
+}
+
+.jumbotron-projects {
+  background-image: url("/img/jumbotron/rawpixel-com-550994-unsplash.jpg");
+}
+
+.headline {
+  font-size: 2.3em;
+}
+
+.subline {
+  font-size: 1.7em;
 }
 
 /* ======== STUDENT DETAIL START ========= */
@@ -10148,5 +10163,11 @@ body {
 .footer {
   background-color: black;
   color: white;
+}
+
+/* ======== LOGIN, REGISTER =========*/
+
+.min-container {
+  min-height: 68vh;
 }
 
