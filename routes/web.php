@@ -14,3 +14,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/projects', 'HomeController@viewProjects');
 Route::get('/students/{id}', 'HomeController@studentDetail');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

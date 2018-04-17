@@ -20,18 +20,18 @@
     @endif
 
     <div class="row student-directory">
-        {{-- @foreach($students as $student)
+        @foreach($projects as $project)
         <div class="col-3">
             <div class="card mb-3">
-                <a href="/students/{{ $student->id }}"><img class="card-img-top" src="/img/students/{{ str_replace(" ", "", $student->full_name) }}.jpg" alt="Card image cap"></a>
+                <a href="/projects/{{ $project->id }}"><img class="card-img-top" src="/img/projects/{{ str_replace(" ", "", $project->name) }}.jpg" alt="Card image cap"></a>
                 <div class="card-body">
-                    <a href="/students/{{ $student->id }}"><h5 class="card-title">{{ $student->full_name }}</h5></a>
+                    <a href="/students/{{ $project->id }}"><h5 class="card-title">{{ $project->name }}</h5></a>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>
-        @endforeach --}}
+        @endforeach
     </div>
 </div>
 @endsection

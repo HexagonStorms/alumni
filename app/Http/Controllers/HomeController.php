@@ -8,6 +8,13 @@ use Log;
 
 class HomeController extends Controller
 {
+
+    public function __construct()
+    {
+        // $this->middleware('auth');
+    }
+
+
     public function index(Request $request)
     {
         $query = $request->query("full_name");
