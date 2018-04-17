@@ -10000,6 +10000,10 @@ a.text-dark:focus {
   background-color: white;
 }
 
+.no-underline {
+  text-decoration: none !important;
+}
+
 .white-link {
   color: white;
   -webkit-transition-duration: 0.3s;
@@ -10156,6 +10160,10 @@ body {
   position: absolute;
   color: white;
   cursor: pointer;
+}
+
+.back-arrow:hover {
+  color: #d9d9d9;
 }
 
 /* ======== FOOTER START =========*/

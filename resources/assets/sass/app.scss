@@ -9,6 +9,9 @@
 .bg-white {
     background-color: white;
 }
+.no-underline {
+    text-decoration: none !important;
+}
 .white-link {
     color: white;
     transition-duration: 0.3s;
@@ -84,6 +87,9 @@ body {
 .subline {
     font-size: 1.7em;
 }
+.collaborator {
+    // max-width: 80px;
+}
 
 /* ======== STUDENT DETAIL START ========= */
 .question {
@@ -135,6 +141,9 @@ body {
     position: absolute;
     color: white;
     cursor: pointer;
+    &:hover {
+        color: darken(white, 15%);
+    }
 }
 
 /* ======== FOOTER START =========*/

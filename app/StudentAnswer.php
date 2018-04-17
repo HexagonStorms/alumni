@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentAnswer extends Model
 {
+
     public function question()
     {
         return $this->hasOne('App\Question', 'id', 'question_id');

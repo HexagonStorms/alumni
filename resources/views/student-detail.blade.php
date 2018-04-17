@@ -20,19 +20,21 @@
         <div class="col-lg-3 col-md-6">
             <img src="/img/students/{{ str_replace(" ", "", $student->full_name) }}.jpg" alt="{{ $student->full_name }}" title="{{ $student->full_name }}" class="img-fluid mb-3" />
             <p class="text-center"><span class="student-specialization">{{ $student->specialization['title'] }}</span></p>
-            <a href="tel:{{ $student->phone }}"><p class="student-phone text-center mb-2">{{ $student->phone }}</p></a>
+            <a href="tel:{{ $student->phone }}">
+                <p class="student-phone text-center mb-2">{{ $student->phone }}</p>
+            </a>
 
             @if (!empty($student->homepage))
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <a class="primary-link" href="{{ $student->homepage }}">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <a class="primary-link" href="{{ $student->homepage }}">
                             <i class="fas fa-browser"></i>
                         </a>
-                        <a class="primary-link" href="http://www.{{ $student->homepage }}">
+                    <a class="primary-link" href="http://www.{{ $student->homepage }}">
                             <span class="student-media ml-2">Portfolio</span>
                         </a>
-                    </div>
                 </div>
+            </div>
             @endif
 
             <div class="row justify-content-center">
@@ -70,10 +72,10 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
+                    <a class="primary-link" href="/assets/{{ str_replace(" ", " ", $student->full_name) }}.pdf">
                         <i class="fas fa-file-alt"></i>
                     </a>
-                    <a class="primary-link" href="/assets/{{ str_replace(" ", "", $student->full_name) }}.pdf">
+                    <a class="primary-link" href="/assets/{{ str_replace(" ", " ", $student->full_name) }}.pdf">
                         <span class="student-media ml-2">Resume</span>
                     </a>
                 </div>
@@ -81,11 +83,11 @@
         </div>
         <div class="col-lg-9 col-md-6">
             @if (!empty($student->video))
-                <div class="row mb-4">
-                    <div class="col">
-                        <iframe width="100%" height="450px" src="{{ $student->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <iframe width="100%" height="450px" src="{{ $student->video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
+            </div>
             @endif
             <div class="row">
                 <div class="col">
@@ -96,6 +98,28 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col my-5">
+            <h2 class="text-primary"><a href="/projects">Projects</a></h2>
+        </div>
+    </div>
+    <div class="row">
+        @foreach($projects as $project)
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{ $project->project->image_path }}" alt="{{ $project->project->name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $project->project->name }}</h5>
+                        <p class="card-text">{{ $project->project->summary }}</p>
+                        @if (strlen($project->project->url) > 0)
+                            <a href="{{ $project->project->url }}" class="btn btn-primary">View</a>
+                        @endif
+                        <a href="{{ $project->project->github }}" class=" ml-2 btn btn-secondary"><i class="fab fa-github"></i> Github</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 

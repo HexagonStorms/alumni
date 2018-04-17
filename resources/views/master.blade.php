@@ -31,9 +31,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/projects">Projects</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Student Login</a>
-                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="http://valleytechrgv.com">Back to Main Site</a>
                 </li>
