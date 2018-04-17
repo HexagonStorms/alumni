@@ -29,7 +29,7 @@
                 <a href="/projects/{{ $project->id }}"><img class="card-img-top" src="{{ $project->image_path }}" alt="Card image cap"></a>
                 <div class="card-body">
                     <a href="/projects/{{ $project->id }}"><h5 class="card-title">{{ $project->name }}</h5></a>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{ $project->summary }}</p>
                     <p>
                         <div class="row">
                             @foreach($project->projectStudents as $ps)
