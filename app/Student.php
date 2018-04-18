@@ -29,8 +29,8 @@ class Student extends Model
     {
         $first3 = substr($value, 0, 3);
         $second3 = substr($value, 3, 3);
-        $last3 = substr($value, 6, 3);
-        return "$first3-$second3-$last3";
+        $last4 = substr($value, 6, 4);
+        return "$first3-$second3-$last4";
     }
 
     public function studentAnswers()
