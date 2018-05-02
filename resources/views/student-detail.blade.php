@@ -112,9 +112,9 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $project->project->name }}</h5>
                         <p class="card-text">{{ $project->project->summary }}</p>
-                        @if (strlen($project->project->url) > 0)
+                        {{-- @if (strlen($project->project->url) > 0)
                             <a href="{{ $project->project->url }}" class="btn btn-primary">View</a>
-                        @endif
+                        @endif --}}
                         <a href="{{ $project->project->github }}" class=" ml-2 btn btn-secondary"><i class="fab fa-github"></i> Github</a>
                     </div>
                 </div>

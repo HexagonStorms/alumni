@@ -43,9 +43,9 @@
                         </div>
                     </p>
 
-                    @if (strlen($project->url) > 0)
+                    {{-- @if (strlen($project->url) > 0)
                         <a href="{{ $project->url }}" class="btn btn-primary">View</a>
-                    @endif
+                    @endif --}}
                     <a href="{{ $project->github }}" class=" ml-2 btn btn-secondary"><i class="fab fa-github"></i> Github</a>
                 </div>
             </div>
