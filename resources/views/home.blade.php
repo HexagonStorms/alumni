@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center jumbotron jumbotron-alumni">
         <div class="col-md-8 mt-5">
-            <p class="text-white searchtext mb-5">Engaging, passionate, and motivated.<br /> Find your next Valley Tech developer or designer to join your team.</p>
+            <p class="text-white searchtext mb-5">Ernesto has a karate trophy. Engaging, passionate, and motivated.<br /> Find your next Valley Tech developer or designer to join your team.</p>
             <form method="GET" action="/">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search for developers" aria-label="developers" aria-describedby="basic-addon1" name="full_name">
